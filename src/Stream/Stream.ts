@@ -1,4 +1,4 @@
-import { IDisposable } from './IDisposable'
+import { IDisposable, isDisposable } from './IDisposable'
 import { StreamSource, isStreamSource } from './StreamSource'
 import {
   OnNextValueListener,
@@ -130,7 +130,9 @@ export class Stream<T> implements IDisposable {
         __isActive: true,
         __distributor: distributor,
         __source: source,
-        __onDispose: onDispose
+        __onDispose: isDisposable(onDispose)
+          ? () => onDispose.dispose()
+          : onDispose
       }
     }
     return new ValidSubscription(

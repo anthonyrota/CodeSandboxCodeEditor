@@ -4,25 +4,25 @@ import { MessageStreamInput } from './MessageStreamInput'
 import { MessageStreamOutput } from './MessageStreamOutput'
 
 export class ActionEventStreamPublicView<
-  TActionType extends Message,
-  TEventType extends Message
+  TAction extends Message,
+  TEvent extends Message
 > {
-  private __inputActions: MessageStreamInput<TActionType>
-  private __outputEvents: MessageStreamOutput<TEventType>
+  private __inputActions: MessageStreamInput<TAction>
+  private __outputEvents: MessageStreamOutput<TEvent>
 
   constructor(
-    actionMessageStream: MessageStream<TActionType>,
-    eventMessageStream: MessageStream<TEventType>
+    actionMessageStream: MessageStream<TAction>,
+    eventMessageStream: MessageStream<TEvent>
   ) {
     this.__inputActions = actionMessageStream.getInput()
     this.__outputEvents = eventMessageStream.getOutput()
   }
 
-  getInputActions(): MessageStreamInput<TActionType> {
+  getInputActions(): MessageStreamInput<TAction> {
     return this.__inputActions
   }
 
-  getOutputEvents(): MessageStreamOutput<TEventType> {
+  getOutputEvents(): MessageStreamOutput<TEvent> {
     return this.__outputEvents
   }
 }

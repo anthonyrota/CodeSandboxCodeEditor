@@ -1,12 +1,12 @@
-import { IDisposable } from './IDisposable'
-import { Stream } from './Stream'
-import { StreamDistributor } from './StreamDistributor'
-import { StreamSource } from './StreamSource'
+import { Disposable } from '../Disposable/Disposable'
+import { Stream } from '../Stream/Stream'
+import { StreamDistributor } from '../Stream/StreamDistributor'
+import { StreamSource } from '../Stream/StreamSource'
 import { Message } from './Message'
 import { MessageStreamInput } from './MessageStreamInput'
 import { MessageStreamOutput } from './MessageStreamOutput'
 
-export class MessageStream<T extends Message> implements IDisposable {
+export class MessageStream<T extends Message> implements Disposable {
   private __distributor: StreamDistributor<T>
   private __source: StreamSource<T>
   private __stream: Stream<T>

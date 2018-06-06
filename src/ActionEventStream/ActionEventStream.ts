@@ -1,11 +1,11 @@
-import { IDisposable } from './IDisposable'
-import { Message } from './Message'
-import { MessageStream } from './MessageStream'
+import { Disposable } from '../Disposable/Disposable'
+import { Message } from '../MessageStream/Message'
+import { MessageStream } from '../MessageStream/MessageStream'
 import { ActionEventStreamPublicView } from './ActionEventStreamPublicView'
 import { ActionEventStreamInternalView } from './ActionEventStreamInternalView'
 
 export class ActionEventStream<TAction extends Message, TEvent extends Message>
-  implements IDisposable {
+  implements Disposable {
   private __actionMessageStream: MessageStream<TAction>
   private __eventMessageStream: MessageStream<TEvent>
   private __publicView: ActionEventStreamPublicView<TAction, TEvent>

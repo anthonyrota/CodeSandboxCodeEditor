@@ -1,5 +1,5 @@
-import { Stream } from './Stream'
-import { StreamSource } from './StreamSource'
+import { Stream } from '../Stream/Stream'
+import { StreamSource } from '../Stream/StreamSource'
 import { Message } from './Message'
 
 export class MessageStreamInput<T extends Message> {

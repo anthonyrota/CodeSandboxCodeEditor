@@ -1,7 +1,7 @@
-import { Message } from './Message'
-import { MessageStream } from './MessageStream'
-import { MessageStreamOutput } from './MessageStreamOutput'
-import { MessageStreamInput } from './MessageStreamInput'
+import { Message } from '../MessageStream/Message'
+import { MessageStream } from '../MessageStream/MessageStream'
+import { MessageStreamOutput } from '../MessageStream/MessageStreamOutput'
+import { MessageStreamInput } from '../MessageStream/MessageStreamInput'
 
 export class ActionEventStreamInternalView<
   TAction extends Message,

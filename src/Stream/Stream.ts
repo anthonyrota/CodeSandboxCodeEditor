@@ -1,4 +1,4 @@
-import { IDisposable, isDisposable } from './IDisposable'
+import { Disposable, isDisposable } from '../Disposable/Disposable'
 import { StreamSource, isStreamSource } from './StreamSource'
 import {
   OnNextValueListener,
@@ -32,7 +32,7 @@ interface StreamInactiveState {
 
 type StreamState<T> = StreamActiveState<T> | StreamInactiveState
 
-export class Stream<T> implements IDisposable {
+export class Stream<T> implements Disposable {
   private __state: StreamState<T>
   private __isDisposed: boolean
   private __initiate: InitiateStreamFunction<T>

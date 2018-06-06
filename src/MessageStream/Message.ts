@@ -1,4 +1,4 @@
-import { ConsciousStream } from './ConsciousStream'
+import { ConsciousStream } from '../Stream/ConsciousStream'
 
 export interface Message {
   type: string

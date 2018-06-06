@@ -1,9 +1,9 @@
-import { Maybe } from './Maybe'
-import { Stream } from './Stream'
+import { Maybe } from '../Maybe/Maybe'
+import { Stream } from '../Stream/Stream'
 import {
   ConsciousStream,
   ConsciousStreamStartingValuesInformation
-} from './ConsciousStream'
+} from '../Stream/ConsciousStream'
 import {
   Message,
   MessageStreamsMap,

@@ -1,5 +1,5 @@
 import { Stream } from './Stream'
-import { Maybe } from './Maybe'
+import { Maybe } from '../Maybe/Maybe'
 
 export interface ConsciousStreamStartingValuesInformation<T> {
   startingValue?: Maybe<T>

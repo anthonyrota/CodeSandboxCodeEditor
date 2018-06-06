@@ -1,4 +1,4 @@
-import { IDisposable } from './IDisposable'
+import { Disposable } from '../Disposable/Disposable'
 import { StreamDistributor } from './StreamDistributor'
 import {
   OnNextValueListener,
@@ -6,7 +6,7 @@ import {
   OnCompleteListener
 } from './StreamListeners'
 
-export interface Subscription extends IDisposable {
+export interface Subscription extends Disposable {
   dispose(): void
   isActive(): boolean
   isNullStream(): boolean

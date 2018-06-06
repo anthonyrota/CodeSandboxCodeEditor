@@ -1,4 +1,4 @@
-import { IDisposable } from './IDisposable'
+import { Disposable } from '../Disposable/Disposable'
 import { Stream } from './Stream'
 import { StreamSource } from './StreamSource'
 
@@ -7,7 +7,7 @@ export interface Operator<T, U> {
 }
 
 export interface InitiateStreamFunction<T> {
-  (source: StreamSource<T>): OnStreamDisposeFunction | IDisposable | void
+  (source: StreamSource<T>): OnStreamDisposeFunction | Disposable | void
 }
 
 export interface OnStreamDisposeFunction {

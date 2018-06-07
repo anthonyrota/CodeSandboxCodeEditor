@@ -4,4 +4,4 @@ import { merge } from '../StreamConstructor/StreamConstructorMerge'
 
 export const mergeWith = <T>(
   ...streams: Stream<T>[]
-): Operator<T, T> => stream => merge(...streams, stream)
+): Operator<T, T> => stream => merge(stream, ...streams)
